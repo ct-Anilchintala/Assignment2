@@ -1,3 +1,4 @@
+var acceptance=0;
 function userName(){
     console.log("hi");
     var x= document.getElementById("uname");
@@ -9,6 +10,7 @@ function userName(){
     else {
         x.style.borderColor="green";
         document.getElementById("userreq").innerHTML="";
+        acceptance+=1;
     }
 }
 function Mail(){
@@ -18,6 +20,7 @@ function Mail(){
     if(y){
         document.getElementById("email").style.borderColor="green";
         document.getElementById("validateemail").innerHTML="";
+        acceptance+=1;
     }
     else{
         document.getElementById("email").style.borderColor="red";
@@ -35,6 +38,7 @@ function passkey(){
         if(isValid==true){
             document.getElementById("password").style.borderColor="green";
             document.getElementById("passwordrequirement").innerHTML="";
+            acceptance+=1;
         }
         else{
             document.getElementById("password").style.borderColor="red";
@@ -56,6 +60,7 @@ function confirmPass(){
     if(actual==reentered){
         document.getElementById("Re-entered").style.borderColor="green";
         document.getElementById("passwordmatch").innerHTML="";
+        acceptance+=1;
     }
     else{
         document.getElementById("Re-entered").style.borderColor="red";
@@ -69,4 +74,12 @@ function show_P(){
 function hide_P(){
     document.getElementById("password").setAttribute("type", "text");
     document.getElementById("togglePassword").setAttribute("class", "fa fa-eye-slash");
+}
+function signUp(){
+    if(acceptance==4){
+        alert("You are signed up");
+    }
+    else{
+        alert("Re-Submit the form");
+    }
 }
