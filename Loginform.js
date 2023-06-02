@@ -24,7 +24,7 @@ function Mail(){
         document.getElementById("validateemail").innerHTML="Please Enter A Valid Email Address";
     }   
 }
-function passKey(){
+function passkey(){
     var v= document.getElementById("password").value;
     function validPassword(pass) {
         var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[! @ # $ % ^ & * ( ) _ - = +]).+$/;
